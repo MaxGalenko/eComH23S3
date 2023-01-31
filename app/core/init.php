@@ -1,2 +1,2 @@
 <?php
-include 'app/core/App.php';
+include 'app/core/autoload.php';

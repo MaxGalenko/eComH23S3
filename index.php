@@ -6,4 +6,4 @@ require_once 'app/core/init.php';
 // require is for stuff you need
 // include can be less fatal
 // _once is to ensure things only are included once
-new App;
+new app\core\App;
