@@ -2,6 +2,7 @@
 namespace app\core;
 
 class App {
+
 	function __construct() {
 		// this is where we want to route the requests to the approriate classes/methods
 		// we wish to route requests to /controller/method
@@ -20,7 +21,7 @@ class App {
 			// remove the $request[0] element
 			unset($request[0]);
 		}
-		$controller = 'app\controllers\\' . $controller;
+		$controller = 'app\\controllers\\' . $controller;
 		$controller = new $controller;
 
 		if (isset($request[1]) && method_exists($controller, $request[1])) {
