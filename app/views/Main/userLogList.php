@@ -1,0 +1,12 @@
+<?php $this->view('shared/header', 'User Log Book'); ?>
+
+<table>
+	<tr><th>Log entry</th><th>actions</th></tr>
+<?php
+foreach ($data as $key=>$logEntry) { ?>
+	<tr><td><?= $logEntry ?></td><td><a href='/Main/logDelete/<?=$key?>'>delete</a></td></tr>
+<?php	
+}
+?>
+</table>
+<?php $this->view('shared/footer'); ?>
