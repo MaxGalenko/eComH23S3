@@ -1,4 +1,5 @@
 <?php $this->view('shared/header', 'User Log Book'); ?>
+
 <form method="POST" action="">
 	<label>Write your name</label>
 	<input type="text" name="name">
