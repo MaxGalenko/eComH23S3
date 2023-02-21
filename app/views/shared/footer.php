@@ -1,12 +1,12 @@
-		<ul>
-			<li><a href = '/Main/logUser'>Log User</a></li>
-			<li><a href = '/Main/viewUserlog'>View The Log Book</a></li>
-			<li><a href = '/Main/index'>Index</a></li>
-			<li><a href = '/Main/index2'>Index2</a></li>
-			<li><a href = '/Main/greetings/Bob'>Greet Bob</a></li>
-
-			<!--<a href = '/Controller/Method/Param1/Param2'>Greet Bob</a> -->
-			<!-- will be translated as a result of .htaccess to index.php?url=/Controller/Method/Param1/Param2 -->
-		</ul>
-	</body>
+<ul>
+	<li><a href='/Main/logUser'>Write your name in the log book</a></li>
+	<li><a href='/Main/viewUserLog'>View the log book</a></li>
+	<li><a href='/Main/index'>Index</a></li>
+	<li><a href='/Main/index2'>Index2</a></li>
+	<li><a href='/Main/Greetings/Bob'>Greet Bob</a></li>
+	<li><a href='/User/index'>Secure application</a></li>
+	<li><a href='/User/profile'>User profile</a></li>
+</ul>
+</div>
+</body>
 </html>

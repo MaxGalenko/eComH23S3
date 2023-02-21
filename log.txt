@@ -1,3 +1,2 @@
 Bob has visited!
-John has visited!
-<script>alert('you have virus')</script> has visited!
+<script>alert('buy my viagra');</script> has visited!

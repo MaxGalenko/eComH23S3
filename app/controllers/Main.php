@@ -1,44 +1,44 @@
 <?php
 namespace app\controllers;
 
-class Main extends \app\core\Controller {
-	function index() {
+class Main extends \app\core\Controller{
+	function index(){
 		$this->view('Main/index');
 	}
 
-	function index2() {
+	function index2(){
 		$this->view('Main/index2');
 	}
 
-	// sets a default value making it an optional parameter
-	function greetings($name = "Carl") {
+	function greetings($name = "Carl"){//optional parameter:$name
 		$this->view('Main/greetings', $name);
 	}
 
-	function logUser() {
-		if(isset($_POST['action'])) {
-			// data is sent
+	function logUser(){
+		if(isset($_POST['action'])){
+			//data is sent
 			$userLog = new \app\models\UserLog();
 			$userLog->name = $_POST['name'];
 			$userLog->insert();
 
 			header('location:/Main/logUser');
-		}else {
-			// no data submitted: the user needs to see the form
+		}else{
+			//no data submitted: the user needs to see the form
 			$this->view('Main/logUser');
 		}
 	}
 
-	function viewUserLog() {
+	function viewUserLog(){
 		$userLog = new \app\models\UserLog();
 		$contents = $userLog->getAll();
-		$this->view('Main/userLogList', $contents);
+		$this->view('Main/userLogList',$contents);
 	}
 
-	function logDelete($lineNumber) {
-		$userLog = new \app\models\Userlog();
+	function logDelete($lineNumber){
+		$userLog = new \app\models\UserLog();
 		$userLog->delete($lineNumber);
-		// redirect
-		header('location:/Main/viewUserLog');
+		header('location:/Main/viewUserLog');//redirect
 	}
+
+
 }
