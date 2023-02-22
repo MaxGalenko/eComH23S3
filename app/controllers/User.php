@@ -59,22 +59,4 @@ class User extends \app\core\Controller{
 		$messages = $message->getAllForUser($_SESSION['user_id']);
 		$this->view('User/profile', $messages);
 	}
-
-	public function sendMessage() {
-		if(isset($_POST['action'])) {
-			$receiver = $_POST['receiver'] ?? '';
-			$user = new \app\models\User();
-			$user = $user->getByUsername($receiver);
-			if($user) {
-				$message = new \app\models\Message();
-				$message->receiver = $user->user_id;// set the FK to a PK value
-				$message->sender = $_SESSION['user_id'];
-				$message->message = $_POST['message'];
-				$message->insert();
-			}else {
-				header('location:/User/profile?error=' . "$receiver is not a valid user. No message sent.");
-			}
-		}
-		header('location:/User/profile');
-	}
 }
